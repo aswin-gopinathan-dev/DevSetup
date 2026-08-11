@@ -141,6 +141,10 @@ clone_repo \
     https://github.com/aswin-gopinathan-dev/GPU.git \
     "$HOME/Projects/GPU"
 
+clone_repo \
+    https://github.com/aswin-gopinathan-dev/3D.git \
+    "$HOME/Projects/3D"
+
 
 # Uncomment if you ALSO want a development copy of nvim
 # under ~/Projects/nvim
