@@ -45,7 +45,8 @@ sudo dnf install -y \
     mesa-libGL-devel \
     mesa-demos \
     SDL2-devel \
-    glm-devel
+    glm-devel \
+    tree-sitter-cli
 
 
 # ============================================================
