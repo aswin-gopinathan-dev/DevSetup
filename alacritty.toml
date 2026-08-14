@@ -1,0 +1,57 @@
+[general]
+import = [
+    "C:\\Users\\AswinNair\\AppData\\Roaming\\alacritty\\themes\\alacritty-theme\\themes\\flat_remix.toml"
+    #"C:\\Users\\AswinNair\\AppData\\Roaming\\alacritty\\themes\\alacritty-theme\\themes\\tokyo_night.toml"
+]
+
+[font]
+size = 9.5
+
+[font.offset]
+x = 0
+y = 5
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "SemiBold"
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_interval = 500
+unfocused_hollow = false
+blink_timeout = 0
+
+[window]
+dynamic_title = true
+dimensions = { columns = 120, lines = 30 }
+
+[window.padding]
+x = 4
+y = 4
+
+[keyboard]
+bindings = [
+
+  # Send raw Ctrl+V (ASCII 22 / \u0016) directly to Neovim
+  { key = "V", mods = "Control", chars = "\u0016" },
+  
+  # Copy / Paste
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+
+  # (optional) real Ctrl+C to send interrupt to terminal apps
+  { key = "C", mods = "Control|Shift", chars = "\u0003" },
+
+  # Your existing Ctrl-Tab mapping
+  { key = "Tab", mods = "Control", chars = "\u001b[27;5;9~" },
+
+  # (optional) Ctrl-Shift-Tab mapping if you want
+  { key = "Tab", mods = "Control|Shift", chars = "\u001b[27;6;9~" },
+  
+  { key = "F", mods = "Control|Shift", chars = "\u001b[17~" },
+]
+
+
+
+[env]
+TERM = "xterm-256color"
