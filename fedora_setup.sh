@@ -62,7 +62,9 @@ fi
 
 echo
 echo ">>> Installing Yazi..."
-sudo snap install yazi --classic
+sudo dnf install dnf-plugins-core
+sudo dnf copr enable lihaohong/yazi
+sudo dnf install yazi
 
 sudo dnf install ffmpeg p7zip jq poppler-utils fd-find ripgrep fzf zoxide ImageMagick bat glow
 
