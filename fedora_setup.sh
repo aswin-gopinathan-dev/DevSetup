@@ -46,8 +46,25 @@ sudo dnf install -y \
     mesa-demos \
     SDL2-devel \
     glm-devel \
-    tree-sitter-cli
+    tree-sitter-cli \
+    clang-tools-extra
 
+
+echo
+echo ">>> Installing and enabling Snap..."
+
+sudo dnf install -y snapd
+sudo systemctl enable --now snapd.socket
+# Enable classic Snap support
+if [ ! -e /snap ]; then
+    sudo ln -s /var/lib/snapd/snap /snap
+fi
+
+echo
+echo ">>> Installing Yazi..."
+sudo snap install yazi --classic
+
+sudo dnf install ffmpeg p7zip jq poppler-utils fd-find ripgrep fzf zoxide ImageMagick bat glow
 
 # ============================================================
 # 3. GNOME tools
